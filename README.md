@@ -82,3 +82,10 @@ Built using **React (Frontend)**, **Node.js/Express (Backend)**, and **SQLite + 
 8. Once all indicators are green, click **Approve & Import**.
 9. The final **Import Report** audit summary will load, showcasing successfully imported rows and actions logged.
 10. Navigate back to the **Groups** tab, select your group, and verify the balances, simplified settlement plan, and Rohan's itemized breakdowns!
+
+---
+
+## AI Collaboration & Tools Used
+
+This project was developed in collaboration with **Google DeepMind's Antigravity** coding assistant (powered by Gemini). For detailed prompts, failure modes, and code corrections, please see [AI_USAGE.md](file:///c:/Users/hp/OneDrive/Desktop/Expense-APP-Relational/AI_USAGE.md).
+
