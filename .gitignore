@@ -1,0 +1,15 @@
+# Dependency directories
+node_modules/
+
+# Local databases
+*.sqlite
+*.sqlite-journal
+expense-server/database.sqlite
+
+# IDE and environment
+.vscode/
+.env
+*.log
+
+# Scripts
+git-commit-history.bat
