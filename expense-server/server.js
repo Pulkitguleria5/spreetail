@@ -19,8 +19,26 @@ sequelize.sync()
     .then(() => console.log('SQLite Connected and Synced'))
     .catch((error) => console.log('Error Connecting to Database: ', error));
 
+const allowedOrigins = [
+  process.env.CLIENT_URL,
+  'http://localhost:5173',
+  'http://localhost:3000'
+];
+
 const corsOption = {
-    origin: process.env.CLIENT_URL,
+    origin: function (origin, callback) {
+        // Allow requests with no origin (like mobile apps, curl, or postman)
+        if (!origin) return callback(null, true);
+        
+        const isVercel = origin.endsWith('.vercel.app');
+        const isAllowed = allowedOrigins.includes(origin) || isVercel;
+        
+        if (isAllowed) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
     credentials: true
 };
 
